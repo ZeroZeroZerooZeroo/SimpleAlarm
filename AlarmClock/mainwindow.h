@@ -17,10 +17,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-
+public slots:
+    void updateTime();
 
 public:
+
     Ui::MainWindow *ui;
     Alarm *m_alarm;
     QTimer *m_timer;

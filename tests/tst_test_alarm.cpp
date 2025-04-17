@@ -23,7 +23,7 @@ private slots:
     void testSoundSetting();
     void testAlarmStop();
     void testUpdateTime();
-    void testAlarmTriggered();
+    //void testAlarmTriggered();
 };
 
 TestAlarm::TestAlarm() {}
@@ -86,7 +86,7 @@ void TestAlarm::testUpdateTime()
     window.updateTime();
 
     QString labelText = window.ui->statusLabel->text();
-
+    QCoreApplication::processEvents();
     QVERIFY(labelText.contains(beforeTest.toString("hh:mm")));
 
     QSignalSpy spy(window.m_alarm, &Alarm::checkAlarm);

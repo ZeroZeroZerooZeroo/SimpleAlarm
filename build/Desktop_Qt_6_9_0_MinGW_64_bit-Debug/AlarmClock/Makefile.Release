@@ -459,6 +459,21 @@ release/moc_mainwindow.cpp: ../../../AlarmClock/mainwindow.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QTimer \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qtimer.h \
+		../../../AlarmClock/alarm.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QTime \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtaudio.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qaudio.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/QAudioOutput \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qaudiooutput.h \
 		release/moc_predefs.h \
 		C:/Qt1/6.9.0/mingw_64/bin/moc.exe
 	C:\Qt1\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/misha/Documents/AlarmClock/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/AlarmClock/release/moc_predefs.h -IC:/Qt1/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/misha/Documents/AlarmClock/AlarmClock -IC:/Qt1/6.9.0/mingw_64/include -IC:/Qt1/6.9.0/mingw_64/include/QtMultimediaWidgets -IC:/Qt1/6.9.0/mingw_64/include/QtMultimedia -IC:/Qt1/6.9.0/mingw_64/include/QtWidgets -IC:/Qt1/6.9.0/mingw_64/include/QtGui -IC:/Qt1/6.9.0/mingw_64/include/QtNetwork -IC:/Qt1/6.9.0/mingw_64/include/QtTest -IC:/Qt1/6.9.0/mingw_64/include/QtCore -I. -IC:/Qt1/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt1/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt1/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt1/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt1/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt1/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\..\AlarmClock\mainwindow.h -o release\moc_mainwindow.cpp
@@ -831,6 +846,21 @@ release/main.o: ../../../AlarmClock/main.cpp ../../../AlarmClock/mainwindow.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QTimer \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qtimer.h \
+		../../../AlarmClock/alarm.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QTime \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtaudio.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qaudio.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/QAudioOutput \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qaudiooutput.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QApplication \
 		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\..\..\AlarmClock\main.cpp
@@ -1035,7 +1065,53 @@ release/mainwindow.o: ../../../AlarmClock/mainwindow.cpp ../../../AlarmClock/mai
 		C:/Qt1/6.9.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_mainwindow.h
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QTimer \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qtimer.h \
+		../../../AlarmClock/alarm.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QTime \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qtaudio.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qaudio.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/QAudioOutput \
+		C:/Qt1/6.9.0/mingw_64/include/QtMultimedia/qaudiooutput.h \
+		ui_mainwindow.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QMenuBar \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qmenubar.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qmenu.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QStatusBar \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QTimeEdit \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qdatetimeedit.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qtimezone.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt1/6.9.0/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\..\..\AlarmClock\mainwindow.cpp
 
 release/moc_alarm.o: release/moc_alarm.cpp 

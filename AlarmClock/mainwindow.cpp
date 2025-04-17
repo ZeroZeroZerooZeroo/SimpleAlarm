@@ -1,5 +1,6 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "../AlarmClock/ui_mainwindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,11 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(m_timer, &QTimer::timeout, this, &MainWindow::updateTime);
-    connect(m_alarm, &Alarm::triggered, this, &MainWindow::onAlarmTriggered);
+    //connect(m_alarm, &Alarm::triggered, this, &MainWindow::onAlarmTriggered);
     m_timer->start(1000);
     updateTime();
 }
-
+void MainWindow::updateTime()
+{
+    QTime current = QTime::currentTime();
+    ui->statusLabel->setText("Current time: " + current.toString("hh:mm"));
+    m_alarm->checkAlarm(current);
+}
 
 MainWindow::~MainWindow()
 {
