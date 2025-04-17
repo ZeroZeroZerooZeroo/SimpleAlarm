@@ -255,13 +255,14 @@ Makefile: ../../../tests/tests.pro C:/Qt1/6.9.0/mingw_64/mkspecs/win32-g++/qmake
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/default_post.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/testcase.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/warn_on.prf \
-		C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/console.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/permissions.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/qt.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/resources_functions.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/resources.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/moc.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/testlib_defines.prf \
+		C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/console.prf \
+		C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/opengl.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/qml_debug.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/precompile_header.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/qmake_use.prf \
@@ -271,8 +272,10 @@ Makefile: ../../../tests/tests.pro C:/Qt1/6.9.0/mingw_64/mkspecs/win32-g++/qmake
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/yacc.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/lex.prf \
 		../../../tests/tests.pro \
+		C:/Qt1/6.9.0/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt1/6.9.0/mingw_64/lib/Qt6Test.prl \
 		C:/Qt1/6.9.0/mingw_64/lib/Qt6Core.prl \
+		C:/Qt1/6.9.0/mingw_64/lib/Qt6EntryPoint.prl \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\..\..\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/spec_pre.prf:
@@ -460,13 +463,14 @@ C:/Qt1/6.9.0/mingw_64/mkspecs/features/exclusive_builds_post.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/default_post.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/testcase.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/warn_on.prf:
-C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/console.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/permissions.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/qt.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/resources_functions.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/resources.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/moc.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/testlib_defines.prf:
+C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/console.prf:
+C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/opengl.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/qml_debug.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/precompile_header.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/qmake_use.prf:
@@ -476,8 +480,10 @@ C:/Qt1/6.9.0/mingw_64/mkspecs/features/exceptions.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/yacc.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/lex.prf:
 ../../../tests/tests.pro:
+C:/Qt1/6.9.0/mingw_64/lib/Qt6Gui.prl:
 C:/Qt1/6.9.0/mingw_64/lib/Qt6Test.prl:
 C:/Qt1/6.9.0/mingw_64/lib/Qt6Core.prl:
+C:/Qt1/6.9.0/mingw_64/lib/Qt6EntryPoint.prl:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\..\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

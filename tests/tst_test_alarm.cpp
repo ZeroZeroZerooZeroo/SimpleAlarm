@@ -1,26 +1,37 @@
 #include <QCoreApplication>
 #include <QtTest>
-
+#include "../AlarmClock/alarm.h"
+#include "../AlarmClock/alarm.cpp"
 // add necessary includes here
 
-class test_alarm : public QObject
+class TestAlarm : public QObject
 {
     Q_OBJECT
 
 public:
-    test_alarm();
-    ~test_alarm();
+    TestAlarm();
+    ~TestAlarm();
+
 
 private slots:
     void test_case1();
+    void testAlarmTimeSetting();
 };
 
-test_alarm::test_alarm() {}
+TestAlarm::TestAlarm() {}
 
-test_alarm::~test_alarm() {}
+TestAlarm::~TestAlarm() {}
 
-void test_alarm::test_case1() {}
+void TestAlarm::test_case1() {}
 
-QTEST_MAIN(test_alarm)
+void TestAlarm::testAlarmTimeSetting()
+{
+    Alarm alarm;
+    QTime testTime(8, 30);
+    alarm.setAlarmTime(testTime);
+    QCOMPARE(alarm.alarmTime(), testTime);
+}
+
+QTEST_MAIN(TestAlarm)
 
 #include "tst_test_alarm.moc"

@@ -30,78 +30,82 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 QT_WARNING_DISABLE_GCC("-Wuseless-cast")
 namespace {
-struct qt_meta_tag_ZN10test_alarmE_t {};
+struct qt_meta_tag_ZN9TestAlarmE_t {};
 } // unnamed namespace
 
-template <> constexpr inline auto test_alarm::qt_create_metaobjectdata<qt_meta_tag_ZN10test_alarmE_t>()
+template <> constexpr inline auto TestAlarm::qt_create_metaobjectdata<qt_meta_tag_ZN9TestAlarmE_t>()
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "test_alarm",
+        "TestAlarm",
         "test_case1",
-        ""
+        "",
+        "testAlarmTimeSetting"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'test_case1'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'testAlarmTimeSetting'
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
     QtMocHelpers::UintData qt_enums {
     };
-    return QtMocHelpers::metaObjectData<test_alarm, qt_meta_tag_ZN10test_alarmE_t>(QMC::MetaObjectFlag{}, qt_stringData,
+    return QtMocHelpers::metaObjectData<TestAlarm, qt_meta_tag_ZN9TestAlarmE_t>(QMC::MetaObjectFlag{}, qt_stringData,
             qt_methods, qt_properties, qt_enums);
 }
-Q_CONSTINIT const QMetaObject test_alarm::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject TestAlarm::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10test_alarmE_t>.stringdata,
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10test_alarmE_t>.data,
+    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN9TestAlarmE_t>.stringdata,
+    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN9TestAlarmE_t>.data,
     qt_static_metacall,
     nullptr,
-    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN10test_alarmE_t>.metaTypes,
+    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN9TestAlarmE_t>.metaTypes,
     nullptr
 } };
 
-void test_alarm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void TestAlarm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    auto *_t = static_cast<test_alarm *>(_o);
+    auto *_t = static_cast<TestAlarm *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->test_case1(); break;
+        case 1: _t->testAlarmTimeSetting(); break;
         default: ;
         }
     }
     (void)_a;
 }
 
-const QMetaObject *test_alarm::metaObject() const
+const QMetaObject *TestAlarm::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *test_alarm::qt_metacast(const char *_clname)
+void *TestAlarm::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10test_alarmE_t>.strings))
+    if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN9TestAlarmE_t>.strings))
         return static_cast<void*>(this);
     return QObject::qt_metacast(_clname);
 }
 
-int test_alarm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int TestAlarm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

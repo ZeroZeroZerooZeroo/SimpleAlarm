@@ -36,6 +36,7 @@ SED           = $(QMAKE) -install sed
 MOVE          = move
 SUBTARGETS    =  \
 		sub-AlarmClock \
+		sub-tests \
 		sub-tests
 
 
@@ -64,6 +65,31 @@ sub-AlarmClock-install_subtargets: FORCE
 sub-AlarmClock-uninstall_subtargets: FORCE
 	@if not exist AlarmClock\ mkdir AlarmClock\ & if not exist AlarmClock\ exit 1
 	cd AlarmClock\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\AlarmClock\AlarmClock.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+sub-tests-qmake_all:  FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd tests\ && $(MAKE) -f Makefile qmake_all
+sub-tests: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+sub-tests-make_first: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+sub-tests-all: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+sub-tests-clean: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+sub-tests-distclean: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+sub-tests-install_subtargets: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+sub-tests-uninstall_subtargets: FORCE
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-tests-qmake_all:  FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	cd tests\ && $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -482,16 +508,16 @@ C:/Qt1/6.9.0/mingw_64/mkspecs/features/lex.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\AlarmClock.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
-qmake_all: sub-AlarmClock-qmake_all sub-tests-qmake_all FORCE
+qmake_all: sub-AlarmClock-qmake_all sub-tests-qmake_all sub-tests-qmake_all FORCE
 
-make_first: sub-AlarmClock-make_first sub-tests-make_first  FORCE
-all: sub-AlarmClock-all sub-tests-all  FORCE
-clean: sub-AlarmClock-clean sub-tests-clean  FORCE
-distclean: sub-AlarmClock-distclean sub-tests-distclean  FORCE
+make_first: sub-AlarmClock-make_first sub-tests-make_first sub-tests-make_first  FORCE
+all: sub-AlarmClock-all sub-tests-all sub-tests-all  FORCE
+clean: sub-AlarmClock-clean sub-tests-clean sub-tests-clean  FORCE
+distclean: sub-AlarmClock-distclean sub-tests-distclean sub-tests-distclean  FORCE
 	-$(DEL_FILE) Makefile
 	-$(DEL_FILE) .qmake.stash
-install_subtargets: sub-AlarmClock-install_subtargets sub-tests-install_subtargets FORCE
-uninstall_subtargets: sub-AlarmClock-uninstall_subtargets sub-tests-uninstall_subtargets FORCE
+install_subtargets: sub-AlarmClock-install_subtargets sub-tests-install_subtargets sub-tests-install_subtargets FORCE
+uninstall_subtargets: sub-AlarmClock-uninstall_subtargets sub-tests-uninstall_subtargets sub-tests-uninstall_subtargets FORCE
 
 sub-AlarmClock-debug:
 	@if not exist AlarmClock\ mkdir AlarmClock\ & if not exist AlarmClock\ exit 1
@@ -499,7 +525,10 @@ sub-AlarmClock-debug:
 sub-tests-debug:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
-debug: sub-AlarmClock-debug sub-tests-debug
+sub-tests-debug:
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
+debug: sub-AlarmClock-debug sub-tests-debug sub-tests-debug
 
 sub-AlarmClock-release:
 	@if not exist AlarmClock\ mkdir AlarmClock\ & if not exist AlarmClock\ exit 1
@@ -507,7 +536,10 @@ sub-AlarmClock-release:
 sub-tests-release:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
-release: sub-AlarmClock-release sub-tests-release
+sub-tests-release:
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
+release: sub-AlarmClock-release sub-tests-release sub-tests-release
 
 sub-AlarmClock-check:
 	@if not exist AlarmClock\ mkdir AlarmClock\ & if not exist AlarmClock\ exit 1
@@ -515,7 +547,10 @@ sub-AlarmClock-check:
 sub-tests-check:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
-check: sub-AlarmClock-check sub-tests-check
+sub-tests-check:
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+check: sub-AlarmClock-check sub-tests-check sub-tests-check
 
 sub-AlarmClock-benchmark:
 	@if not exist AlarmClock\ mkdir AlarmClock\ & if not exist AlarmClock\ exit 1
@@ -523,7 +558,10 @@ sub-AlarmClock-benchmark:
 sub-tests-benchmark:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-AlarmClock-benchmark sub-tests-benchmark
+sub-tests-benchmark:
+	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\misha\Documents\AlarmClock\tests\tests.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-AlarmClock-benchmark sub-tests-benchmark sub-tests-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE
