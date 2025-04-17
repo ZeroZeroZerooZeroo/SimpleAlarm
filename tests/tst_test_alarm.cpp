@@ -19,6 +19,7 @@ private slots:
     void testAlarmActiveState();
     void testAlarmTriggering();
     void testSoundSetting();
+    void testAlarmStop();
 };
 
 TestAlarm::TestAlarm() {}
@@ -62,6 +63,14 @@ void TestAlarm::testSoundSetting()
     alarm.setSource(testFile);
 
     QVERIFY(true); // Заглушка
+}
+
+void TestAlarm::testAlarmStop()
+{
+    Alarm alarm;
+    alarm.setActive(true);
+    alarm.stop();
+    QVERIFY(!alarm.isActive());
 }
 
 QTEST_MAIN(TestAlarm)

@@ -37,3 +37,9 @@ void Alarm::setSource(const QString &filePath)
 {
     m_player->setSource(QUrl::fromLocalFile(filePath));
 }
+
+void Alarm::stop()
+{
+    m_active = false;
+    m_triggered = false;
+}

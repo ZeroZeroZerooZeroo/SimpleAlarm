@@ -15,6 +15,7 @@ public:
     bool isActive() const;
     void setActive(bool active);
     void setSource(const QString &filePath);
+    void stop();
 
 public slots:
     void checkAlarm(const QTime &currentTime);
