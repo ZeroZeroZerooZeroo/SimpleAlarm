@@ -16,6 +16,7 @@ public:
 private slots:
     void test_case1();
     void testAlarmTimeSetting();
+    void testAlarmActiveState();
 };
 
 TestAlarm::TestAlarm() {}

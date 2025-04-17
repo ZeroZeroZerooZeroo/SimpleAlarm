@@ -12,3 +12,12 @@ QTime Alarm::alarmTime() const {
 void Alarm::setAlarmTime(const QTime &time) {
     m_alarmTime = time;
 }
+bool Alarm::isActive() const
+{
+    return m_active;
+}
+
+void Alarm::setActive(bool active)
+{
+    m_active = active;
+}
