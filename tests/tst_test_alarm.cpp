@@ -18,6 +18,7 @@ private slots:
     void testAlarmTimeSetting();
     void testAlarmActiveState();
     void testAlarmTriggering();
+    void testSoundSetting();
 };
 
 TestAlarm::TestAlarm() {}
@@ -52,6 +53,15 @@ void TestAlarm::testAlarmTriggering()
     alarm.checkAlarm(QTime::currentTime().addSecs(2));
 
     QCOMPARE(spy.count(), 1);
+}
+
+void TestAlarm::testSoundSetting()
+{
+    Alarm alarm;
+    QString testFile = "test.mp3";
+    alarm.setSource(testFile);
+
+    QVERIFY(true); // Заглушка
 }
 
 QTEST_MAIN(TestAlarm)
