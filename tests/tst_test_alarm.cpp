@@ -24,6 +24,14 @@ TestAlarm::~TestAlarm() {}
 
 void TestAlarm::test_case1() {}
 
+void TestAlarm::testAlarmActiveState()
+{
+    Alarm alarm;
+    QVERIFY(!alarm.isActive());
+    alarm.setActive(true);
+    QVERIFY(alarm.isActive());
+}
+
 void TestAlarm::testAlarmTimeSetting()
 {
     Alarm alarm;
