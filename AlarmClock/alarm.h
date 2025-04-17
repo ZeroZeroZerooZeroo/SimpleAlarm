@@ -12,10 +12,16 @@ public:
     void setAlarmTime(const QTime &time);
     bool isActive() const;
     void setActive(bool active);
+public slots:
+    void checkAlarm(const QTime &currentTime);
 
 private:
     QTime m_alarmTime;
     bool m_active = false;
+    bool m_triggered = false;
+
+signals:
+    void triggered();
 };
 
 #endif // ALARM_H

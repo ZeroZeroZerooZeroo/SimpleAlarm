@@ -21,3 +21,11 @@ void Alarm::setActive(bool active)
 {
     m_active = active;
 }
+
+void Alarm::checkAlarm(const QTime &currentTime)
+{
+    if(m_active && !m_triggered && currentTime >= m_alarmTime) {
+        m_triggered = true;
+        emit triggered();
+    }
+}
