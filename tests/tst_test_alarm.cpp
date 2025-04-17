@@ -2,6 +2,8 @@
 #include <QtTest>
 #include "../AlarmClock/alarm.h"
 #include "../AlarmClock/alarm.cpp"
+#include "../AlarmClock/mainwindow.h"
+#include "../AlarmClock/ui_mainwindow.h"
 // add necessary includes here
 
 class TestAlarm : public QObject
@@ -20,6 +22,8 @@ private slots:
     void testAlarmTriggering();
     void testSoundSetting();
     void testAlarmStop();
+    void testUpdateTime();
+    void testAlarmTriggered();
 };
 
 TestAlarm::TestAlarm() {}
@@ -72,6 +76,24 @@ void TestAlarm::testAlarmStop()
     alarm.stop();
     QVERIFY(!alarm.isActive());
 }
+
+void TestAlarm::testUpdateTime()
+{
+    MainWindow window;
+
+    QTime beforeTest = QTime::currentTime();
+
+    window.updateTime();
+
+    QString labelText = window.ui->statusLabel->text();
+
+    QVERIFY(labelText.contains(beforeTest.toString("hh:mm")));
+
+    QSignalSpy spy(window.m_alarm, &Alarm::checkAlarm);
+    window.updateTime();
+    QCOMPARE(spy.count(), 1);
+}
+
 
 QTEST_MAIN(TestAlarm)
 
