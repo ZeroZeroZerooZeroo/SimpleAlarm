@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QTime>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 class Alarm : public QObject
 {
     Q_OBJECT
@@ -12,6 +14,8 @@ public:
     void setAlarmTime(const QTime &time);
     bool isActive() const;
     void setActive(bool active);
+    void setSource(const QString &filePath);
+
 public slots:
     void checkAlarm(const QTime &currentTime);
 
@@ -19,6 +23,8 @@ private:
     QTime m_alarmTime;
     bool m_active = false;
     bool m_triggered = false;
+    QMediaPlayer *m_player;
+    QAudioOutput *m_audioOutput;
 
 signals:
     void triggered();

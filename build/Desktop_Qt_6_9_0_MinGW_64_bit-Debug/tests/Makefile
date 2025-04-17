@@ -263,6 +263,7 @@ Makefile: ../../../tests/tests.pro C:/Qt1/6.9.0/mingw_64/mkspecs/win32-g++/qmake
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/testlib_defines.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/console.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/opengl.prf \
+		C:/Qt1/6.9.0/mingw_64/mkspecs/features/uic.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/qml_debug.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/precompile_header.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/qmake_use.prf \
@@ -272,8 +273,12 @@ Makefile: ../../../tests/tests.pro C:/Qt1/6.9.0/mingw_64/mkspecs/win32-g++/qmake
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/yacc.prf \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/lex.prf \
 		../../../tests/tests.pro \
+		C:/Qt1/6.9.0/mingw_64/lib/Qt6MultimediaWidgets.prl \
+		C:/Qt1/6.9.0/mingw_64/lib/Qt6Multimedia.prl \
+		C:/Qt1/6.9.0/mingw_64/lib/Qt6Widgets.prl \
 		C:/Qt1/6.9.0/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt1/6.9.0/mingw_64/lib/Qt6Test.prl \
+		C:/Qt1/6.9.0/mingw_64/lib/Qt6Network.prl \
 		C:/Qt1/6.9.0/mingw_64/lib/Qt6Core.prl \
 		C:/Qt1/6.9.0/mingw_64/lib/Qt6EntryPoint.prl \
 		C:/Qt1/6.9.0/mingw_64/mkspecs/features/build_pass.prf
@@ -471,6 +476,7 @@ C:/Qt1/6.9.0/mingw_64/mkspecs/features/moc.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/testlib_defines.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/console.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/win32/opengl.prf:
+C:/Qt1/6.9.0/mingw_64/mkspecs/features/uic.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/qml_debug.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/precompile_header.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/qmake_use.prf:
@@ -480,8 +486,12 @@ C:/Qt1/6.9.0/mingw_64/mkspecs/features/exceptions.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/yacc.prf:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/lex.prf:
 ../../../tests/tests.pro:
+C:/Qt1/6.9.0/mingw_64/lib/Qt6MultimediaWidgets.prl:
+C:/Qt1/6.9.0/mingw_64/lib/Qt6Multimedia.prl:
+C:/Qt1/6.9.0/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt1/6.9.0/mingw_64/lib/Qt6Gui.prl:
 C:/Qt1/6.9.0/mingw_64/lib/Qt6Test.prl:
+C:/Qt1/6.9.0/mingw_64/lib/Qt6Network.prl:
 C:/Qt1/6.9.0/mingw_64/lib/Qt6Core.prl:
 C:/Qt1/6.9.0/mingw_64/lib/Qt6EntryPoint.prl:
 C:/Qt1/6.9.0/mingw_64/mkspecs/features/build_pass.prf:

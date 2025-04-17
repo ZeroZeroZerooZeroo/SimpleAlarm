@@ -1,7 +1,7 @@
-QT       += core gui
+QT += core gui multimedia multimediawidgets widgets testlib
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+TARGET = SimpleAlarm
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
