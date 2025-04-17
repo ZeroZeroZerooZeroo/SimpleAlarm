@@ -17,6 +17,7 @@ private slots:
     void test_case1();
     void testAlarmTimeSetting();
     void testAlarmActiveState();
+    void testAlarmTriggering();
 };
 
 TestAlarm::TestAlarm() {}
@@ -39,6 +40,18 @@ void TestAlarm::testAlarmTimeSetting()
     QTime testTime(8, 30);
     alarm.setAlarmTime(testTime);
     QCOMPARE(alarm.alarmTime(), testTime);
+}
+
+void TestAlarm::testAlarmTriggering()
+{
+    Alarm alarm;
+    alarm.setAlarmTime(QTime::currentTime().addSecs(1));
+    alarm.setActive(true);
+
+    QSignalSpy spy(&alarm, &Alarm::triggered);
+    alarm.checkAlarm(QTime::currentTime().addSecs(2));
+
+    QCOMPARE(spy.count(), 1);
 }
 
 QTEST_MAIN(TestAlarm)
