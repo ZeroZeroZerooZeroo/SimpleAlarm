@@ -27,6 +27,7 @@ private slots:
     void testTimeSetting();
     void testSetsAlarmTime();
     void testSelectsMusicFile();
+    void testStopsAlarm();
 };
 
 TestAlarm::TestAlarm() {}
@@ -145,6 +146,15 @@ void TestAlarm::testSelectsMusicFile()
     QVERIFY(!window.m_alarm->currentMusicPath().isEmpty());
 
 #undef QFileDialog
+}
+
+void TestAlarm::testStopsAlarm()
+{
+    MainWindow window;
+    window.m_alarm->setActive(true);
+
+    window.on_stopButton_clicked();
+    QVERIFY(!window.m_alarm->isActive());
 }
 
 QTEST_MAIN(TestAlarm)
