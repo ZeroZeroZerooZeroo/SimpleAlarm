@@ -4,7 +4,7 @@
 #include "../AlarmClock/alarm.cpp"
 #include "../AlarmClock/mainwindow.h"
 #include "../AlarmClock/ui_mainwindow.h"
-// add necessary includes here
+#include "mock_file_dialog.h"
 
 class TestAlarm : public QObject
 {
@@ -26,6 +26,7 @@ private slots:
     void testAlarmTriggered();
     void testTimeSetting();
     void testSetsAlarmTime();
+    void testSelectsMusicFile();
 };
 
 TestAlarm::TestAlarm() {}
@@ -133,6 +134,18 @@ void TestAlarm::testSetsAlarmTime()
     QCOMPARE(window.m_alarm->alarmTime(), testTime);
 }
 
+
+void TestAlarm::testSelectsMusicFile()
+{
+    MainWindow window;
+
+    #define QFileDialog MockFileDialog
+
+    window.on_selectMusicButton_clicked();
+    QVERIFY(!window.m_alarm->currentMusicPath().isEmpty());
+
+#undef QFileDialog
+}
 
 QTEST_MAIN(TestAlarm)
 

@@ -15,3 +15,4 @@ HEADERS += \
     ../AlarmClock/alarm.h\
     ../AlarmClock/mainwindow.h\
     "../AlarmClock/ui_mainwindow.h"\
+    mock_file_dialog.h

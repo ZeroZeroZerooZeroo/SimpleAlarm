@@ -73,7 +73,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="MusicButton">
        <property name="text">
         <string>Выбрать мелодию</string>
        </property>
