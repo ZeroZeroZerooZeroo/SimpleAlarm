@@ -25,6 +25,7 @@ private slots:
     void testUpdateTime();
     void testAlarmTriggered();
     void testTimeSetting();
+    void testSetsAlarmTime();
 };
 
 TestAlarm::TestAlarm() {}
@@ -118,6 +119,18 @@ void TestAlarm::testTimeSetting()
     window.setAlarmTime(testTime);
 
     QCOMPARE(window.alarmTime(), testTime);
+}
+
+void TestAlarm::testSetsAlarmTime()
+{
+    MainWindow window;
+
+    QTime testTime(8, 30);
+    window.ui->timeEdit->setTime(testTime);
+
+    window.on_setTimeButton_clicked();
+
+    QCOMPARE(window.m_alarm->alarmTime(), testTime);
 }
 
 

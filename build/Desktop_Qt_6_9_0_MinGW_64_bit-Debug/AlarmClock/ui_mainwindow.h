@@ -28,15 +28,15 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QTimeEdit *timeEdit;
-    QPushButton *pushButton;
-    QWidget *widget1;
+    QPushButton *setTimeButton;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
     QCheckBox *checkBox;
     QLabel *statusLabel;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
@@ -50,50 +50,50 @@ public:
         MainWindow->resize(438, 256);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(0, 10, 421, 64));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(0, 10, 421, 64));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        timeEdit = new QTimeEdit(widget);
+        timeEdit = new QTimeEdit(layoutWidget);
         timeEdit->setObjectName("timeEdit");
 
         verticalLayout->addWidget(timeEdit);
 
-        pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton");
+        setTimeButton = new QPushButton(layoutWidget);
+        setTimeButton->setObjectName("setTimeButton");
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(setTimeButton);
 
-        widget1 = new QWidget(centralwidget);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(0, 80, 421, 26));
-        horizontalLayout = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(centralwidget);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(0, 80, 421, 26));
+        horizontalLayout = new QHBoxLayout(layoutWidget1);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        checkBox = new QCheckBox(widget1);
+        checkBox = new QCheckBox(layoutWidget1);
         checkBox->setObjectName("checkBox");
 
         horizontalLayout->addWidget(checkBox);
 
-        statusLabel = new QLabel(widget1);
+        statusLabel = new QLabel(layoutWidget1);
         statusLabel->setObjectName("statusLabel");
 
         horizontalLayout->addWidget(statusLabel);
 
-        widget2 = new QWidget(centralwidget);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(0, 120, 421, 81));
-        verticalLayout_2 = new QVBoxLayout(widget2);
+        layoutWidget2 = new QWidget(centralwidget);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(0, 120, 421, 81));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton_2 = new QPushButton(widget2);
+        pushButton_2 = new QPushButton(layoutWidget2);
         pushButton_2->setObjectName("pushButton_2");
 
         verticalLayout_2->addWidget(pushButton_2);
 
-        pushButton_3 = new QPushButton(widget2);
+        pushButton_3 = new QPushButton(layoutWidget2);
         pushButton_3->setObjectName("pushButton_3");
 
         verticalLayout_2->addWidget(pushButton_3);
@@ -115,7 +115,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "\320\243\321\201\321\202\320\260\320\275\320\276\320\262\320\270\321\202\321\214 \320\262\321\200\320\265\320\274\321\217", nullptr));
+        setTimeButton->setText(QCoreApplication::translate("MainWindow", "\320\243\321\201\321\202\320\260\320\275\320\276\320\262\320\270\321\202\321\214 \320\262\321\200\320\265\320\274\321\217", nullptr));
         checkBox->setText(QCoreApplication::translate("MainWindow", "\320\220\320\272\321\202\320\270\320\262\320\265\320\275", nullptr));
         statusLabel->setText(QCoreApplication::translate("MainWindow", "\321\201\321\202\320\260\321\202\321\203\321\201", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \320\274\320\265\320\273\320\276\320\264\320\270\321\216", nullptr));

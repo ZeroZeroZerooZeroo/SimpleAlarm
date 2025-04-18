@@ -20,7 +20,7 @@ public:
 public slots:
     void updateTime();
     void onAlarmTriggered();
-
+    void on_setTimeButton_clicked();
 public:
 
     Ui::MainWindow *ui;
@@ -28,5 +28,6 @@ public:
     QTimer *m_timer;
     void setAlarmTime(const QTime &time);
     QTime alarmTime() const;
+
 };
 #endif // MAINWINDOW_H

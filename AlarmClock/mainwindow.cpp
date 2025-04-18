@@ -37,6 +37,12 @@ QTime MainWindow::alarmTime() const
     return m_alarm->alarmTime();
 }
 
+void MainWindow::on_setTimeButton_clicked()
+{
+    m_alarm->setAlarmTime(ui->timeEdit->time());
+}
+
+
 MainWindow::~MainWindow()
 {
     delete ui;
