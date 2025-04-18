@@ -30,7 +30,7 @@
      <item>
       <widget class="QPushButton" name="setTimeButton">
        <property name="text">
-        <string>Установить время</string>
+        <string>Set time</string>
        </property>
       </widget>
      </item>
@@ -49,14 +49,14 @@
      <item>
       <widget class="QCheckBox" name="checkBox">
        <property name="text">
-        <string>Активен</string>
+        <string>Active</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="statusLabel">
        <property name="text">
-        <string>статус</string>
+        <string>Status</string>
        </property>
       </widget>
      </item>
@@ -75,14 +75,14 @@
      <item>
       <widget class="QPushButton" name="MusicButton">
        <property name="text">
-        <string>Выбрать мелодию</string>
+        <string>Choose a melody</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="stopButton">
        <property name="text">
-        <string>Остановить</string>
+        <string>Stop</string>
        </property>
       </widget>
      </item>

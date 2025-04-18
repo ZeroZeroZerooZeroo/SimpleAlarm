@@ -50,6 +50,13 @@ void MainWindow::on_selectMusicButton_clicked()
     }
 }
 
+void MainWindow::on_stopButton_clicked()
+{
+    m_alarm->stop();
+    ui->statusLabel->setText("Alarm stopped");
+}
+
+
 MainWindow::~MainWindow()
 {
     delete ui;

@@ -39,7 +39,7 @@ public:
     QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
     QPushButton *MusicButton;
-    QPushButton *pushButton_3;
+    QPushButton *stopButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -93,10 +93,10 @@ public:
 
         verticalLayout_2->addWidget(MusicButton);
 
-        pushButton_3 = new QPushButton(layoutWidget2);
-        pushButton_3->setObjectName("pushButton_3");
+        stopButton = new QPushButton(layoutWidget2);
+        stopButton->setObjectName("stopButton");
 
-        verticalLayout_2->addWidget(pushButton_3);
+        verticalLayout_2->addWidget(stopButton);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -115,11 +115,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        setTimeButton->setText(QCoreApplication::translate("MainWindow", "\320\243\321\201\321\202\320\260\320\275\320\276\320\262\320\270\321\202\321\214 \320\262\321\200\320\265\320\274\321\217", nullptr));
-        checkBox->setText(QCoreApplication::translate("MainWindow", "\320\220\320\272\321\202\320\270\320\262\320\265\320\275", nullptr));
-        statusLabel->setText(QCoreApplication::translate("MainWindow", "\321\201\321\202\320\260\321\202\321\203\321\201", nullptr));
-        MusicButton->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \320\274\320\265\320\273\320\276\320\264\320\270\321\216", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "\320\236\321\201\321\202\320\260\320\275\320\276\320\262\320\270\321\202\321\214", nullptr));
+        setTimeButton->setText(QCoreApplication::translate("MainWindow", "Set time", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "Active", nullptr));
+        statusLabel->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
+        MusicButton->setText(QCoreApplication::translate("MainWindow", "Choose a melody", nullptr));
+        stopButton->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
     } // retranslateUi
 
 };

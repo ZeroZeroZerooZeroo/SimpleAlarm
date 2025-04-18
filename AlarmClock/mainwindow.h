@@ -23,6 +23,7 @@ public slots:
     void onAlarmTriggered();
     void on_setTimeButton_clicked();
     void on_selectMusicButton_clicked();
+    void on_stopButton_clicked();
 public:
 
     Ui::MainWindow *ui;
