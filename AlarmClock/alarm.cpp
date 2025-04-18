@@ -6,7 +6,7 @@ Alarm::Alarm(QObject *parent)
     m_audioOutput(new QAudioOutput(this))
 {
     m_player->setAudioOutput(m_audioOutput);
-    m_audioOutput->setVolume(100);
+    m_audioOutput->setVolume(50);
 }
 QTime Alarm::alarmTime() const {
     return m_alarmTime;
@@ -23,12 +23,14 @@ bool Alarm::isActive() const
 void Alarm::setActive(bool active)
 {
     m_active = active;
+    m_triggered = false;
 }
 
 void Alarm::checkAlarm(const QTime &currentTime)
 {
     if(m_active && !m_triggered && currentTime >= m_alarmTime) {
         m_triggered = true;
+        m_player->play();
         emit triggered();
     }
 }
@@ -40,7 +42,7 @@ void Alarm::setSource(const QString &filePath)
 
 void Alarm::stop()
 {
-    m_active = false;
+    m_player->stop();
     m_triggered = false;
 }
 

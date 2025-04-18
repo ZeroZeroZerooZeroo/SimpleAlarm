@@ -73,7 +73,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QPushButton" name="MusicButton">
+      <widget class="QPushButton" name="selectMusicButton">
        <property name="text">
         <string>Choose a melody</string>
        </property>

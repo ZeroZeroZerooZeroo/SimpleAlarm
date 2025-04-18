@@ -38,7 +38,7 @@ public:
     QLabel *statusLabel;
     QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *MusicButton;
+    QPushButton *selectMusicButton;
     QPushButton *stopButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -88,10 +88,10 @@ public:
         verticalLayout_2 = new QVBoxLayout(layoutWidget2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        MusicButton = new QPushButton(layoutWidget2);
-        MusicButton->setObjectName("MusicButton");
+        selectMusicButton = new QPushButton(layoutWidget2);
+        selectMusicButton->setObjectName("selectMusicButton");
 
-        verticalLayout_2->addWidget(MusicButton);
+        verticalLayout_2->addWidget(selectMusicButton);
 
         stopButton = new QPushButton(layoutWidget2);
         stopButton->setObjectName("stopButton");
@@ -118,7 +118,7 @@ public:
         setTimeButton->setText(QCoreApplication::translate("MainWindow", "Set time", nullptr));
         activeCheckBox->setText(QCoreApplication::translate("MainWindow", "Active", nullptr));
         statusLabel->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
-        MusicButton->setText(QCoreApplication::translate("MainWindow", "Choose a melody", nullptr));
+        selectMusicButton->setText(QCoreApplication::translate("MainWindow", "Choose a melody", nullptr));
         stopButton->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
     } // retranslateUi
 

@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(m_timer, &QTimer::timeout, this, &MainWindow::updateTime);
-    //connect(m_alarm, &Alarm::triggered, this, &MainWindow::onAlarmTriggered);
+    connect(m_alarm, &Alarm::triggered, this, &MainWindow::onAlarmTriggered);
     m_timer->start(1000);
     updateTime();
 }
