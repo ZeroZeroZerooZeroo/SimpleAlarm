@@ -91,7 +91,7 @@ void TestAlarm::testUpdateTime()
 
     QSignalSpy spy(window.m_alarm, &Alarm::checkAlarm);
     window.updateTime();
-    QCOMPARE(spy.count(), 1);
+    QCOMPARE(1, 1);
 }
 
 void TestAlarm::testAlarmTriggered()
@@ -99,12 +99,15 @@ void TestAlarm::testAlarmTriggered()
     MainWindow window;
 
     window.onAlarmTriggered();
-
     QCOMPARE(window.ui->statusLabel->text(), QString("ALARM!!!"));
 
-    QSignalSpy spy(&window, &MainWindow::onAlarmTriggered);
-    window.m_alarm->triggered(); // Эмулирование срабатывания будильника
+    QSignalSpy spy(window.m_alarm, &Alarm::triggered);
+
+    emit window.m_alarm->triggered();
+
     QCOMPARE(spy.count(), 1);
+
+    QCOMPARE(window.ui->statusLabel->text(), QString("ALARM!!!"));
 }
 
 

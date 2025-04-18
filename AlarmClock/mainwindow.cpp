@@ -21,6 +21,12 @@ void MainWindow::updateTime()
     m_alarm->checkAlarm(current);
 }
 
+void MainWindow::onAlarmTriggered()
+{
+    ui->statusLabel->setText("ALARM!!!");
+
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;

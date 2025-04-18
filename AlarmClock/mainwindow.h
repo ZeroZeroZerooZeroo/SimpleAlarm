@@ -19,6 +19,7 @@ public:
 
 public slots:
     void updateTime();
+    void onAlarmTriggered();
 
 public:
 
