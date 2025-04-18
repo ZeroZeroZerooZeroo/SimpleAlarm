@@ -34,7 +34,7 @@ public:
     QPushButton *setTimeButton;
     QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
-    QCheckBox *checkBox;
+    QCheckBox *activeCheckBox;
     QLabel *statusLabel;
     QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
@@ -72,10 +72,10 @@ public:
         horizontalLayout = new QHBoxLayout(layoutWidget1);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        checkBox = new QCheckBox(layoutWidget1);
-        checkBox->setObjectName("checkBox");
+        activeCheckBox = new QCheckBox(layoutWidget1);
+        activeCheckBox->setObjectName("activeCheckBox");
 
-        horizontalLayout->addWidget(checkBox);
+        horizontalLayout->addWidget(activeCheckBox);
 
         statusLabel = new QLabel(layoutWidget1);
         statusLabel->setObjectName("statusLabel");
@@ -116,7 +116,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         setTimeButton->setText(QCoreApplication::translate("MainWindow", "Set time", nullptr));
-        checkBox->setText(QCoreApplication::translate("MainWindow", "Active", nullptr));
+        activeCheckBox->setText(QCoreApplication::translate("MainWindow", "Active", nullptr));
         statusLabel->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
         MusicButton->setText(QCoreApplication::translate("MainWindow", "Choose a melody", nullptr));
         stopButton->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));

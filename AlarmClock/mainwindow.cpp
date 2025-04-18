@@ -55,7 +55,11 @@ void MainWindow::on_stopButton_clicked()
     m_alarm->stop();
     ui->statusLabel->setText("Alarm stopped");
 }
-
+void MainWindow::on_activeCheckBox_toggled(bool checked)
+{
+    m_alarm->setActive(checked);
+    ui->statusLabel->setText(checked ? "Alarm active" : "Alarm inactive");
+}
 
 MainWindow::~MainWindow()
 {

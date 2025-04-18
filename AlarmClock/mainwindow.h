@@ -24,6 +24,7 @@ public slots:
     void on_setTimeButton_clicked();
     void on_selectMusicButton_clicked();
     void on_stopButton_clicked();
+    void on_activeCheckBox_toggled(bool checked);
 public:
 
     Ui::MainWindow *ui;
