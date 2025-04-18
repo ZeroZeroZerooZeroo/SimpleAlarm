@@ -43,3 +43,8 @@ void Alarm::stop()
     m_active = false;
     m_triggered = false;
 }
+
+QString Alarm::currentMusicPath() const
+{
+    return m_player->source().toString();
+}

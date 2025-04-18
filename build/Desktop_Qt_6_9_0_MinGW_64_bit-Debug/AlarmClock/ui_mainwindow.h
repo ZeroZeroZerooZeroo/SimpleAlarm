@@ -38,7 +38,7 @@ public:
     QLabel *statusLabel;
     QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton_2;
+    QPushButton *MusicButton;
     QPushButton *pushButton_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -88,10 +88,10 @@ public:
         verticalLayout_2 = new QVBoxLayout(layoutWidget2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton_2 = new QPushButton(layoutWidget2);
-        pushButton_2->setObjectName("pushButton_2");
+        MusicButton = new QPushButton(layoutWidget2);
+        MusicButton->setObjectName("MusicButton");
 
-        verticalLayout_2->addWidget(pushButton_2);
+        verticalLayout_2->addWidget(MusicButton);
 
         pushButton_3 = new QPushButton(layoutWidget2);
         pushButton_3->setObjectName("pushButton_3");
@@ -118,7 +118,7 @@ public:
         setTimeButton->setText(QCoreApplication::translate("MainWindow", "\320\243\321\201\321\202\320\260\320\275\320\276\320\262\320\270\321\202\321\214 \320\262\321\200\320\265\320\274\321\217", nullptr));
         checkBox->setText(QCoreApplication::translate("MainWindow", "\320\220\320\272\321\202\320\270\320\262\320\265\320\275", nullptr));
         statusLabel->setText(QCoreApplication::translate("MainWindow", "\321\201\321\202\320\260\321\202\321\203\321\201", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \320\274\320\265\320\273\320\276\320\264\320\270\321\216", nullptr));
+        MusicButton->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \320\274\320\265\320\273\320\276\320\264\320\270\321\216", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\320\236\321\201\321\202\320\260\320\275\320\276\320\262\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 

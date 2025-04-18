@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QFileDialog>
 #include "alarm.h"
 
 QT_BEGIN_NAMESPACE
@@ -21,6 +22,7 @@ public slots:
     void updateTime();
     void onAlarmTriggered();
     void on_setTimeButton_clicked();
+    void on_selectMusicButton_clicked();
 public:
 
     Ui::MainWindow *ui;

@@ -42,6 +42,13 @@ void MainWindow::on_setTimeButton_clicked()
     m_alarm->setAlarmTime(ui->timeEdit->time());
 }
 
+void MainWindow::on_selectMusicButton_clicked()
+{
+    QString file = QFileDialog::getOpenFileName(this, "Choose a tune", "", "*.mp3");
+    if (!file.isEmpty()) {
+        m_alarm->setSource(file);
+    }
+}
 
 MainWindow::~MainWindow()
 {

@@ -16,7 +16,7 @@ public:
     void setActive(bool active);
     void setSource(const QString &filePath);
     void stop();
-
+    QString currentMusicPath() const;
 public slots:
     void checkAlarm(const QTime &currentTime);
 
