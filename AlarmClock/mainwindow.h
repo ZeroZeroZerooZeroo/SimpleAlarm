@@ -26,5 +26,7 @@ public:
     Ui::MainWindow *ui;
     Alarm *m_alarm;
     QTimer *m_timer;
+    void setAlarmTime(const QTime &time);
+    QTime alarmTime() const;
 };
 #endif // MAINWINDOW_H

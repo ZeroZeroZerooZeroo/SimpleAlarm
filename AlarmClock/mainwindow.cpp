@@ -27,6 +27,16 @@ void MainWindow::onAlarmTriggered()
 
 }
 
+void MainWindow::setAlarmTime(const QTime &time)
+{
+    m_alarm->setAlarmTime(time);
+}
+
+QTime MainWindow::alarmTime() const
+{
+    return m_alarm->alarmTime();
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
