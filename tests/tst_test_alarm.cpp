@@ -23,7 +23,7 @@ private slots:
     void testSoundSetting();
     void testAlarmStop();
     void testUpdateTime();
-    //void testAlarmTriggered();
+    void testAlarmTriggered();
 };
 
 TestAlarm::TestAlarm() {}
@@ -91,6 +91,19 @@ void TestAlarm::testUpdateTime()
 
     QSignalSpy spy(window.m_alarm, &Alarm::checkAlarm);
     window.updateTime();
+    QCOMPARE(spy.count(), 1);
+}
+
+void TestAlarm::testAlarmTriggered()
+{
+    MainWindow window;
+
+    window.onAlarmTriggered();
+
+    QCOMPARE(window.ui->statusLabel->text(), QString("ALARM!!!"));
+
+    QSignalSpy spy(&window, &MainWindow::onAlarmTriggered);
+    window.m_alarm->triggered(); // Эмулирование срабатывания будильника
     QCOMPARE(spy.count(), 1);
 }
 
