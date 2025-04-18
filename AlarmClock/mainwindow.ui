@@ -47,7 +47,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QCheckBox" name="checkBox">
+      <widget class="QCheckBox" name="activeCheckBox">
        <property name="text">
         <string>Active</string>
        </property>

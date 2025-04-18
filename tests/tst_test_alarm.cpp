@@ -28,6 +28,7 @@ private slots:
     void testSetsAlarmTime();
     void testSelectsMusicFile();
     void testStopsAlarm();
+    void testTogglesAlarmState();
 };
 
 TestAlarm::TestAlarm() {}
@@ -155,6 +156,17 @@ void TestAlarm::testStopsAlarm()
 
     window.on_stopButton_clicked();
     QVERIFY(!window.m_alarm->isActive());
+}
+
+void TestAlarm::testTogglesAlarmState()
+{
+    MainWindow window;
+
+    window.on_activeCheckBox_toggled(false);
+    QVERIFY(!window.m_alarm->isActive());
+
+    window.on_activeCheckBox_toggled(true);
+    QVERIFY(window.m_alarm->isActive());
 }
 
 QTEST_MAIN(TestAlarm)
